@@ -10,7 +10,14 @@ class FruitList extends React.Component {
   }
 }
 
-const wrapWithConnect = connect()
-const wrappedThing = wrapWithConnect(FruitList)
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+    fruitList: state.fruits
+  }
+}
 
-export default FruitList
+const wrapWithConnect = connect(mapStateToProps)
+const ReduxFruitList = wrapWithConnect(FruitList)
+
+export default ReduxFruitList
