@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <FruitList />
+        <FruitList fruitList={this.state.fruit}/>
       </div>
     );
   }
